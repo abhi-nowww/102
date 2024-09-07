@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game 102</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Game 102</h1>
+    
+    <!-- Step 1: Select the number of players -->
+    <div id="player-setup">
+      <h2>Select Number of Players (Max 6):</h2>
+      <input type="number" id="numPlayers" min="1" max="6" value="2">
+      <button id="submitPlayers">Next</button>
+    </div>
+
+    <!-- Step 2: Enter player names -->
+    <div id="name-setup" style="display:none;">
+      <h2>Enter Player Names:</h2>
+      <div id="nameInputs"></div>
+      <button id="startGame">Start Game</button>
+    </div>
+
+    <!-- Game Area -->
+    <div id="game-area" style="display:none;">
+      <h2>Round: <span id="roundCounter">1</span></h2>  <!-- Round counter -->
+      <h2>Enter Scores</h2>
+      <div id="scoreInputs"></div>
+      <button id="nextRound">Submit Round</button>
+
+      <h3>Leaderboard</h3>
+      <ul id="leaderboard"></ul>
+    </div>
+
+    <!-- Winner Modal -->
+    <div id="winnerModal" class="modal" style="display:none;">
+      <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <h2>Congratulations!</h2>
+        <p id="winnerMessage"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
